@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <p><h1>Acerca de la plataforma</h1>
+
+    <div class="container">
+        <p><h6>Pagina de Inicio <button type="button"><a class="navbar-brand" href="/AppCoder">Inicio</a></button></h6>
+        <p><h6>Pagina de Profesores <button type="button"><a class="navbar-brand" href="/AppCoder/profesores">Profesores</a></button> </h6>
+        <p><h6>Pagina de Cursos <button type="button"><a class="navbar-brand" href="/AppCoder/cursos">Cursos</a></button> </h6>
+        <p><h6>Pagina de Estudiantes <button type="button"><a class="navbar-brand" href="/AppCoder/estudiantes">Estudiantes</a></button> </h6>
+        <p><h6>Pagina de Entregables <button type="button"><a class="navbar-brand" href="/AppCoder/entregables">Entegables</a></button> </h6>
+        <p><h6>Pagina de Acerca de Mi <button type="button"><a class="navbar-brand" href="/AppCoder/AcercaDeMi">AcercaDeMi</a></button> </h6>
+    </div>         
+
+    
+{% endblock %}

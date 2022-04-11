@@ -1,0 +1,41 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Unite a la comunidad de aprendizaje online en vivo más grande de Latinoamérica</h1>
+  
+
+    <h3>Busqueda de camada:</h3>
+
+    <form action="/AppCoder/buscar/" method="GET">
+
+        <input type="number" name="camada" id="camada">
+
+        <input type="submit" value="Buscar">
+
+
+
+
+    </form>
+
+    
+
+    {% if cursos %}
+
+    <p>Estamos buscando el: {{camada}}</p>
+
+    <ul>
+	{% for curso in cursos %}
+        <h6>Nombre de la camada: </h6><li> {{curso.nombre}} </li>
+		<h6>Numero de la camada: </h6><li> {{curso.camada}} </li>
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+{% endblock %}

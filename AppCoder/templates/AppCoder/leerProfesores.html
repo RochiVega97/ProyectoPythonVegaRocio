@@ -1,0 +1,40 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h1>Informacion de profesores</h1>
+<body>
+
+    {% for p in profesores %}
+
+        <li>{{p}}</li>  
+        <button>
+            <a href="{% url 'EliminarProfesor' p.nombre %}"> Eliminar</a>
+            <a href="{% url 'EditarProfesor' p.nombre %}"> Editar</a>
+        </button>
+
+
+    {% endfor %}
+
+    <br>
+    <a href="profesores">Agregar otro Profesor</a>
+    <button>
+        <a href="../AppCoder/profesores">Volver</a>
+    </button>
+
+    
+</body>
+
+</html>
+
+{% endblock %}

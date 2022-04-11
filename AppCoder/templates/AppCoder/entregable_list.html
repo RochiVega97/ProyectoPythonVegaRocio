@@ -1,0 +1,44 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable_List</title>
+</head>
+<body>
+
+    <h1>Entregable de Coder</h1>
+    <ul>
+        {% for entregable in object_list %}
+
+            <li>
+                <p>NOMBRE: {{ entregable.nombre }} </p>
+                <p>FECHA DE ENTREGA: {{ entregable.fechaDeEntrega }} </p>
+                <p>ESTADO: {{ entregable.entregado }} </p>
+                <p> 
+
+                
+                </p> 
+            </li>
+
+        {% endfor %}
+    </ul>
+
+
+
+    <br>
+
+    <button>
+        <a href="../entregables">Volver</a>
+    </button>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante_List</title>
+</head>
+<body>
+
+    <h1>Estudiantes</h1>
+    <ul>
+        {% for estudiante in object_list %}
+
+            <li>
+                <p>NOMBRE: {{ estudiante.nombre }} </p>
+                <p>APELLIDO: {{ estudiante.apellido }} </p>
+
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    <br>
+
+    <button>
+        <a href="../estudiantes">Volver</a>
+    </button>
+
+</body>
+</html>
+{% endblock %}

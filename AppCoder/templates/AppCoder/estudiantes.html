@@ -1,0 +1,38 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h3>Agregar Nuevo Estudiante:</h3>
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    {% if miFormulario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+    <form action="" method="POST">{% csrf_token %}
+
+        <!-- Acá está la magia de Django-->
+    
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>
+
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Estudiantes</h1>
+    <p>Info de los estudiantes</p>
+    <div class="container">
+        <button type="button"><a class="navbar-brand" href="/AppCoder/estudiante/list">Estudiantes</a></button> 
+    </div> 
+
+  
+
+{% endblock %}
